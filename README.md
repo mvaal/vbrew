@@ -23,7 +23,7 @@ Add `vbrew` alias to your profile. The alias will print after first run.
     alias vbrew="<repo-path>/vbrew.sh"
 
 ## Usage
-Other than installing specific formula versions, vbrew proxies all other calls to `brew` so you
+Other than installing specific formula versions, `vbrew` proxies all other calls to `brew` so you
 can use it as if you were using `brew` itself
 
     vbrew install terraform 0.12.24

@@ -28,7 +28,7 @@ if [ -z "$REVISION" ]; then
   echo "$FORMULA-$VERSION not found in homebrew-core"
   exit 1
 fi
-git checkout -b "${FORMULA}-${VERSION}" 2>/dev/null || git checkout -B "${FORMULA}-${VERSION}" "$REVISION"
+git checkout "${FORMULA}-${VERSION}" 2>/dev/null || git checkout -B "${FORMULA}-${VERSION}" "$REVISION"
 
 FORMULA_PATH="Formula/$FORMULA.rb"
 

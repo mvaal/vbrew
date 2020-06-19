@@ -46,6 +46,9 @@ if [ $SIGINT -ne 0 ]; then
     git add "$FORMULA_PATH"
     git commit -m "Updating sha256 to $ACTUAL"
     brew install "$FORMULA_PATH"
+  else
+    echo "$INSTALL_RESULT"
+    exit $SIGINT
   fi
 else
   WARNING=$(echo "$INSTALL_RESULT" | awk -F': ' '/[Ww]arning/ {print $2}')

@@ -23,7 +23,7 @@ cd homebrew-core || exit
 
 git fetch && git switch -C master origin/master
 
-REVISION=$(git log --all --grep="$FORMULA $VERSION" | grep commit | sed 's/^.* //')
+REVISION=$(git log --all --grep="$FORMULA $VERSION" --pretty=fuller --no-abbrev-commit | grep commit | sed 's/^.* //')
 if [ -z "$REVISION" ]; then
   echo "$FORMULA-$VERSION not found in homebrew-core"
   exit 1
